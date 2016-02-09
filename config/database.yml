@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  pool: 5
+
+development:
+  <<: *default
+  database: catalogapp_development
+
+test:
+  <<: *default
+  database: catalogapp_test
+
+production:
+  <<: *default
+  database: catalogapp_production
+  username: catalogapp
+  password: <%= ENV['CATALOGAPP_DATABASE_PASSWORD'] %>

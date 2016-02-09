@@ -1,0 +1,17 @@
+<% @page_title = "Courses" %>
+<% @page_header = "Courses" %>
+
+
+<%= form_tag url_for(controller: :courses, action: :index), class: 'form-inline', method: :get do %>
+  <%= text_field :search, params[:search], placeholder: 'Search for Course', class: 'form-control', id: 'course-search-box' %>
+  <%= select_tag ['School of Engineering', 'School of Education'], {include_blank: 'Select Department'}, class: 'form-control', id: 'college-sel-box' %>
+  <%= select_tag ['School of Engineering', 'School of Education'], {include_blank: 'Select Department'}, class: 'form-control', id: 'department-sel-box' %>
+  <%= submit_tag 'Search', name: nil, class: 'btn btn-danger submit-btn', id: 'course-search-btn' %>
+<% end %>
+
+<div class="text-center course-list row">
+  <% @courses.each do |course| %>
+    <span class="course-number btn btn-default col-sm-3", id="course-<%= course.id %>"><%= "#{course.id} : #{course.full_number}" %></span>
+
+  <% end %>
+</div>

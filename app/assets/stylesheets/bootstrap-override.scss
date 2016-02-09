@@ -1,0 +1,11 @@
+nav{
+  li a, a:link, a:visited{
+    color: black;
+    border: none;
+  }
+  a:hover, a:active, a.selected{
+    @include colors(red, red);
+    border-left: 2px solid red;
+    box-sizing: none;
+  }
+}

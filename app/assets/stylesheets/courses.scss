@@ -1,0 +1,26 @@
+.course-number{
+  margin: 10px;
+  padding: 10px;
+  width: 20%;
+  @include colors(rgba(120,120,120, 0.1), $unm-red);
+}
+
+#course-search-box{
+  width: 30%;
+}
+
+#college-sel-box{
+  width: 20%;
+}
+
+#department-sel-box{
+  width: 20%;
+}
+
+#course-search-btn{
+  width: 15%;
+}
+
+.course-list{
+  margin-top: 100px;
+}

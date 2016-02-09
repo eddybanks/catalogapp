@@ -1,0 +1,37 @@
+<%= form_for(@general_information) do |f| %>
+  <% if @general_information.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@general_information.errors.count, "error") %> prohibited this general_information from being saved:</h2>
+
+      <ul>
+      <% @general_information.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :section_header %><br>
+    <%= f.text_field :section_header %>
+  </div>
+  <div class="field">
+    <%= f.label :section_text %><br>
+    <%= f.text_area :section_text %>
+  </div>
+  <div class="field">
+    <%= f.label :subsection_header %><br>
+    <%= f.text_field :subsection_header %>
+  </div>
+  <div class="field">
+    <%= f.label :subsection_text %><br>
+    <%= f.text_area :subsection_text %>
+  </div>
+  <div class="field">
+    <%= f.label :url_links %><br>
+    <%= f.text_field :url_links %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

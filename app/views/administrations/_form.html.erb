@@ -1,0 +1,37 @@
+<%= form_for(@administration) do |f| %>
+  <% if @administration.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@administration.errors.count, "error") %> prohibited this administration from being saved:</h2>
+
+      <ul>
+      <% @administration.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :section_header %><br>
+    <%= f.text_field :section_header, class: 'control-form' %>
+  </div>
+  <div class="field">
+    <%= f.label :section_text %><br>
+    <%= f.text_area :bootsy_area, class: 'control-form text-edit' %>
+  </div>
+  <div class="field">
+    <%= f.label :subsection_header %><br>
+    <%= f.text_field :subsection_header, class: 'control-form' %>
+  </div>
+  <div class="field">
+    <%= f.label :subsection_text %><br>
+    <%= f.text_area :bootsy_area, class: 'control-form text-edit' %>
+  </div>
+  <div class="field">
+    <%= f.label :url_links %><br>
+    <%= f.text_field :url_links %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

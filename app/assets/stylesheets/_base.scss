@@ -1,0 +1,13 @@
+$unm-red: #c10037;
+
+@mixin spacing($max-height, $min-height, $padding, $margin) {
+  max-height: $max-height;
+  min-height: $min-height;
+  padding: $padding;
+  margin: $margin;
+}
+
+@mixin colors($background-color, $color) {
+  background-color: $background-color;
+  color: $color;
+}

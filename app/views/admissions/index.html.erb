@@ -1,0 +1,14 @@
+<% @page_title = 'Admissions' %>
+<% @page_header = 'Admissions' %>
+
+<% @admissions.each do |p| %>
+  <div class="section">
+    <h4 class="section-header">
+      <%= p.section_header %>
+    </h4>
+    <div class="section-text">
+      <%= p.section_text %>
+    </div>
+    <hr><br>
+</div>
+<% end %>

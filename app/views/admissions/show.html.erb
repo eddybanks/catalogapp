@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Section header:</strong>
+  <%= @admission.section_header %>
+</p>
+
+<p>
+  <strong>Section text:</strong>
+  <%= @admission.section_text %>
+</p>
+
+<p>
+  <strong>Subsection header:</strong>
+  <%= @admission.subsection_header %>
+</p>
+
+<p>
+  <strong>Subsection text:</strong>
+  <%= @admission.subsection_text %>
+</p>
+
+<p>
+  <strong>Url links:</strong>
+  <%= @admission.url_links %>
+</p>
+
+<%= link_to 'Edit', edit_admission_path(@admission) %> |
+<%= link_to 'Back', admissions_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Section header:</strong>
+  <%= @administration.section_header %>
+</p>
+
+<p>
+  <strong>Section text:</strong>
+  <%= @administration.section_text %>
+</p>
+
+<p>
+  <strong>Subsection header:</strong>
+  <%= @administration.subsection_header %>
+</p>
+
+<p>
+  <strong>Subsection text:</strong>
+  <%= @administration.subsection_text %>
+</p>
+
+<p>
+  <strong>Url links:</strong>
+  <%= @administration.url_links %>
+</p>
+
+<%= link_to 'Edit', edit_administration_path(@administration) %> |
+<%= link_to 'Back', administrations_path %>

@@ -1,0 +1,29 @@
+@import "base";
+@import "bootstrap-override";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+@import "layout";
+@import "bootsy";
+@import "courses";
+
+body{
+  margin: 0;
+  padding: 0;
+
+  a{
+    text-decoration: none;
+  }
+
+}
+
+
+.inner-wrapper{
+  min-height: 700px;
+  @include colors(lighten(grayscale($unm-red), 60%), #333);
+  box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.2);
+}
+
+.main-body{
+  margin-left: 30px;
+}

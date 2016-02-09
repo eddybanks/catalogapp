@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Section header:</strong>
+  <%= @policy.section_header %>
+</p>
+
+<p>
+  <strong>Section text:</strong>
+  <%= @policy.section_text %>
+</p>
+
+<p>
+  <strong>Subsection header:</strong>
+  <%= @policy.subsection_header %>
+</p>
+
+<p>
+  <strong>Subsection text:</strong>
+  <%= @policy.subsection_text %>
+</p>
+
+<p>
+  <strong>Url links:</strong>
+  <%= @policy.url_links %>
+</p>
+
+<%= link_to 'Edit', edit_policy_path(@policy) %> |
+<%= link_to 'Back', policies_path %>
