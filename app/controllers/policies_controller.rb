@@ -69,6 +69,6 @@ class PoliciesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def policy_params
-      params.require(:policy).permit(:section_header, :section_text, :subsection_header, :subsection_text, :url_links, :bootsy_image_gallery_id)
+      params.require(:policy).permit(:section_header, :section_text, :subsection_header, :subsection_text, :url_links)
     end
 end

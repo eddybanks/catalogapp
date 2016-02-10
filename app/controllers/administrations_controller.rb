@@ -69,6 +69,6 @@ class AdministrationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def administration_params
-      params.require(:administration).permit(:section_header, :section_text, :subsection_header, :subsection_text, :url_links, :bootsy_image_gallery_id)
+      params.require(:administration).permit(:section_header, :section_text, :subsection_header, :subsection_text, :url_links)
     end
 end

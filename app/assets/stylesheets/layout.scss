@@ -1,6 +1,7 @@
 /** nav **/
 
 .sitenav{
+  font-size: 1.2em;
   padding: 0px;
   margin: 0;
   padding-top: 40px;
@@ -9,18 +10,70 @@
   min-height: 700px;
 }
 
+/** unm navbar **/
+.navbar-default{
+  font-family: $navbar-font;
+  background-color: $unm-red;
+  border-color: none;
+  color: #FFFFFF;
+
+}
+
+//Change Navbar Brand Color Below
+.navbar-default .navbar-brand{
+  font-weight: bolder;
+  color: #FFFFFF;
+}
+
+//Change Navbar Brand Hover Color Below
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+   color: black;
+   background-color: transparent;
+ }
+
+//Change the link colors of Navbar Below
+.navbar-default .navbar-nav > li > a {
+   color: #FFFFFF;
+ }
+
+//Change the hover color of active below
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #FFFFFF;
+  background-color: #500000;
+}
+
+//Change the hover color of links below
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus{
+  color: #FFFFFF;
+  background-color: darken($unm-red, 5);
+}
+// This is where we will change the hover color
+// of links that are using dropdown menus!
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus{
+  color: black;
+  background-color: darken($unm-red, 5);
+}
 
 /** header **/
 
 header{
+  font-family: 'Cabin', sans-serif;
   @include spacing(200px, 150px, 30px, 0);
   @include colors(#fff, #000);
 }
 
 .mini-header{
+  font-family: 'Cabin', sans-serif;
   @include spacing(200px, 150px, 30px, 0);
   @include colors(none, $unm-red);
-  margin-left: 100px;
+  padding-left: 100px;
 }
 
 /** footer **/

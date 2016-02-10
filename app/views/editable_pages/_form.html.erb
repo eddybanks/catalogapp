@@ -1,0 +1,22 @@
+<%= form_for(@editable_page) do |f| %>
+  <% if @editable_page.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@editable_page.errors.count, "error") %> prohibited this editable_page from being saved:</h2>
+
+      <ul>
+      <% @editable_page.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :section_content %><br>
+    <%= f.text_area :section_content, class: "tinymce", rows: 40, cols: 120 %>
+    <%= tinymce %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -69,6 +69,6 @@ class AdmissionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admission_params
-      params.require(:admission).permit(:section_header, :section_text, :subsection_header, :subsection_text, :url_links, :bootsy_image_gallery_id)
+      params.require(:admission).permit(:section_header, :section_text, :subsection_header, :subsection_text, :url_links)
     end
 end

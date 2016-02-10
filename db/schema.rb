@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160209024701) do
+ActiveRecord::Schema.define(version: 20160210005832) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,18 +36,20 @@ ActiveRecord::Schema.define(version: 20160209024701) do
     t.datetime "updated_at",        null: false
   end
 
-  create_table "bootsy_image_galleries", force: :cascade do |t|
-    t.integer  "bootsy_resource_id"
-    t.string   "bootsy_resource_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "editable_page_years", force: :cascade do |t|
+    t.integer  "year_id"
+    t.integer  "editable_page_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
-  create_table "bootsy_images", force: :cascade do |t|
-    t.string   "image_file"
-    t.integer  "image_gallery_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  add_index "editable_page_years", ["editable_page_id"], name: "index_editable_page_years_on_editable_page_id", using: :btree
+  add_index "editable_page_years", ["year_id"], name: "index_editable_page_years_on_year_id", using: :btree
+
+  create_table "editable_pages", force: :cascade do |t|
+    t.text     "section_content"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "general_informations", force: :cascade do |t|
@@ -70,4 +72,14 @@ ActiveRecord::Schema.define(version: 20160209024701) do
     t.datetime "updated_at",        null: false
   end
 
+  create_table "years", force: :cascade do |t|
+    t.string   "name"
+    t.string   "homepage_header"
+    t.text     "homepage_text"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_foreign_key "editable_page_years", "editable_pages"
+  add_foreign_key "editable_page_years", "years"
 end

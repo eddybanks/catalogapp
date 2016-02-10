@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= @page_title ? "UNM Catalog | #{@page_title}" : "UNM Catalog" %></title>
+  <title><%= @page_title ? "#{@page_title}::University Catalog | The University of New Mexico" : "University Catalog | The University of New Mexico" %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= tinymce_assets %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
   <div class="outer-wrapper">
 
+    <%= render 'layouts/unm_nav' %>
     <%= render 'layouts/header' %>
 
     <div class="inner-wrapper row">

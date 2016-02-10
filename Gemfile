@@ -15,8 +15,7 @@ gem "font-awesome-rails"
 gem 'react-rails', '~> 1.5.0'
 gem 'activeresource'                                                      # accessing remote database
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"         # paperclip for storing images and documents on site
-gem 'will_paginate', '~> 3.0.6'
-gem 'bootsy'                                                              # wysiwyg editor for rails
+gem 'tinymce-rails'                                                       # wysiwyg editor for rails
 
 
 
