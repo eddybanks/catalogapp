@@ -1,2 +1,8 @@
 <% @page_title = 'General Information' %>
 <% @page_header = 'General Information' %>
+
+<% @general_informations.each do |p| %>
+  <div class="section">
+    <%= simple_format(p.section_content) %>
+  </div>
+<% end %>

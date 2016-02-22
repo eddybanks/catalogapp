@@ -3,22 +3,22 @@
     <div class="navbar-collapse collapse" id="horz-nav" role="navigation" tabindex="-1" aria-expanded="false">
       <ul class="nav sidebar-nav" role="menubar">
         <li role="menuitem" tabindex="-1">
-          <%= link_to 'Course Search', year_courses_path(catalog_year) %>
+          <%= link_to 'Course Search', courses_path %>
         </li>
         <li role="menuitem" tabindex="-1">
-          <%= link_to 'Administration', year_administrations_path(catalog_year) %>
+          <%= link_to 'Administration', year_administrations_path(@year) %>
         </li>
         <li role="menuitem" tabindex="-1">
-          <%= link_to 'Policies', year_policies_path(catalog_year) %>
+          <%= link_to 'Policies', year_policies_path(@year) %>
         </li>
         <li role="menuitem" tabindex="-1">
           <%= link_to 'Degrees Offered', 'http://degrees.unm.edu', target: 'blank' %>
         </li>
         <li role="menuitem" tabindex="-1">
-          <%= link_to 'General Information', year_general_informations_path(catalog_year) %>
+          <%= link_to 'General Information', year_general_informations_path(@year) %>
         </li>
         <li role="menuitem" tabindex="-1">
-          <%= link_to 'Admissions', year_admissions_path(catalog_year) %>
+          <%= link_to 'Admissions', year_admissions_path(@year) %>
         </li>
         <li role="menuitem" tabindex="-1">
           <%= link_to 'Student Services Information', '#' %>

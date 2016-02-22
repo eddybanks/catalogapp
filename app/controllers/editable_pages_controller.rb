@@ -4,7 +4,7 @@ class EditablePagesController < ApplicationController
   # GET /editable_pages
   # GET /editable_pages.json
   def index
-    @editable_pages = EditablePage.all
+    @editable_pages = @year.editable_pages.all
   end
 
   # GET /editable_pages/1
@@ -14,7 +14,7 @@ class EditablePagesController < ApplicationController
 
   # GET /editable_pages/new
   def new
-    @editable_page = EditablePage.new
+    @editable_page = @year.editable_pages.new
   end
 
   # GET /editable_pages/1/edit
@@ -24,15 +24,15 @@ class EditablePagesController < ApplicationController
   # POST /editable_pages
   # POST /editable_pages.json
   def create
-    @editable_page = EditablePage.new(editable_page_params)
+    @editable_page = @year.editable_pages.new(editable_page_params)
 
     respond_to do |format|
       if @editable_page.save
-        format.html { redirect_to @editable_page, notice: 'Editable page was successfully created.' }
-        format.json { render :show, status: :created, location: @editable_page }
+        format.html { redirect_to [@year, @editable_page], notice: 'Editable page was successfully created.' }
+        format.json { render :show, status: :created, location: [@year, @editable_page] }
       else
         format.html { render :new }
-        format.json { render json: @editable_page.errors, status: :unprocessable_entity }
+        format.json { render json: @year_editable_page.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -64,7 +64,7 @@ class EditablePagesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_editable_page
-      @editable_page = EditablePage.find(params[:id])
+      @editable_page = @year.editable_pages.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

@@ -1,10 +1,11 @@
 class AdmissionsController < ApplicationController
+  before_action :set_year, only: [:show, :edit, :update, :destroy]
   before_action :set_admission, only: [:show, :edit, :update, :destroy]
 
   # GET /admissions
   # GET /admissions.json
   def index
-    @admissions = Admission.all
+    @admissions = @year.admissions.all
   end
 
   # GET /admissions/1
@@ -14,7 +15,7 @@ class AdmissionsController < ApplicationController
 
   # GET /admissions/new
   def new
-    @admission = Admission.new
+    @admission = @year.admissions.new
   end
 
   # GET /admissions/1/edit
@@ -24,11 +25,11 @@ class AdmissionsController < ApplicationController
   # POST /admissions
   # POST /admissions.json
   def create
-    @admission = Admission.new(admission_params)
+    @admission = @year.admissions.new(admission_params)
 
     respond_to do |format|
       if @admission.save
-        format.html { redirect_to @admission, notice: 'Admission was successfully created.' }
+        format.html { redirect_to [@year, @admissions], notice: 'Admission was successfully created.' }
         format.json { render :show, status: :created, location: @admission }
       else
         format.html { render :new }
@@ -63,8 +64,12 @@ class AdmissionsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def set_year
+      @year = Year.find(params[:id])
+    end
+
     def set_admission
-      @admission = Admission.find(params[:id])
+      @admission = @year.admission.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

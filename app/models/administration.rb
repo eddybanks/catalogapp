@@ -1,2 +1,2 @@
-class Administration < ActiveRecord::Base
+class Administration < EditablePage
 end

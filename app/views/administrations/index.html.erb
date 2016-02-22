@@ -3,12 +3,6 @@
 
 <% @administrations.each do |p| %>
   <div class="section">
-    <h4 class="section-header" id="admin-sect-header">
-      <%= p.section_header %>
-    </h4>
-    <div class="section-text froala-view" id="admin-sect-text">
-      <%= simple_format(p.section_text) %>
-    </div>
-    <hr><br>
-</div>
+    <%= simple_format(p.section_content) %>
+  </div>
 <% end %>

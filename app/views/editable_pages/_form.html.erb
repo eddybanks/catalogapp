@@ -1,4 +1,4 @@
-<%= form_for(@editable_page) do |f| %>
+<%= form_for [@year, @editable_page] do |f| %>
   <% if @editable_page.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@editable_page.errors.count, "error") %> prohibited this editable_page from being saved:</h2>

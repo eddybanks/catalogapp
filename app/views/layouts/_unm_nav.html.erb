@@ -10,10 +10,10 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Courses",      year_courses_path(catalog_year) %></li>
-        <li><%= link_to "Programs",      '#' %></li>
-        <li><%= link_to "FAQ",          '#' %></li>
-        <li><%= link_to "Contact Us",   '#' %></li>
+        <li><%= link_to "Courses",              courses_path %></li>
+        <li><%= link_to "Programs",             '#' %></li>
+        <li><%= link_to "Editable Pages",       year_editable_pages_path(@year) %></li>
+        <li><%= link_to "Contact Us",           '#' %></li>
       </ul>
 
     </div>

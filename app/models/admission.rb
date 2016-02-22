@@ -1,2 +1,2 @@
-class Admission < ActiveRecord::Base
+class Admission < EditablePage
 end

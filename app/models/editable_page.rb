@@ -4,3 +4,5 @@ class EditablePage < ActiveRecord::Base
   has_many :editable_page_years
 
 end
+
+class Admission < EditablePage; end

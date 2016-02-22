@@ -1,1 +1,5 @@
-<%= react_component 'Editable Page', { data: @editable_pages } %>
+<% @editable_pages.each do |e| %>
+  <%= simple_format(e.section_content) %>
+<% end %>
+
+<%= link_to 'New Editable Page', new_year_editable_page_path %><br>
