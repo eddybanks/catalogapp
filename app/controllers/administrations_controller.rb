@@ -4,7 +4,7 @@ class AdministrationsController < ApplicationController
   # GET /administrations
   # GET /administrations.json
   def index
-    @administrations = Administration.all
+    @administrations = @year.editable_pages.all
   end
 
   # GET /administrations/1
@@ -28,8 +28,8 @@ class AdministrationsController < ApplicationController
 
     respond_to do |format|
       if @administration.save
-        format.html { redirect_to @administration, notice: 'Administration was successfully created.' }
-        format.json { render :show, status: :created, location: @administration }
+        format.html { redirect_to [@year, @administration], notice: 'Administration was successfully created.' }
+        format.json { render :show, status: :created, location: [@year, @administration] }
       else
         format.html { render :new }
         format.json { render json: @administration.errors, status: :unprocessable_entity }
@@ -42,8 +42,8 @@ class AdministrationsController < ApplicationController
   def update
     respond_to do |format|
       if @administration.update(administration_params)
-        format.html { redirect_to @administration, notice: 'Administration was successfully updated.' }
-        format.json { render :show, status: :ok, location: @administration }
+        format.html { redirect_to [@year, @administration], notice: 'Administration was successfully updated.' }
+        format.json { render :show, status: :ok, location: [@year, @administration] }
       else
         format.html { render :edit }
         format.json { render json: @administration.errors, status: :unprocessable_entity }
@@ -56,7 +56,7 @@ class AdministrationsController < ApplicationController
   def destroy
     @administration.destroy
     respond_to do |format|
-      format.html { redirect_to administrations_url, notice: 'Administration was successfully destroyed.' }
+      format.html { redirect_to year_administrations_url, notice: 'Administration was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

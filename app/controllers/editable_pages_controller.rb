@@ -28,11 +28,12 @@ class EditablePagesController < ApplicationController
 
     respond_to do |format|
       if @editable_page.save
+        @editable_page.years << @year
         format.html { redirect_to [@year, @editable_page], notice: 'Editable page was successfully created.' }
         format.json { render :show, status: :created, location: [@year, @editable_page] }
       else
         format.html { render :new }
-        format.json { render json: @year_editable_page.errors, status: :unprocessable_entity }
+        format.json { render json: @editable_page.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -42,8 +43,8 @@ class EditablePagesController < ApplicationController
   def update
     respond_to do |format|
       if @editable_page.update(editable_page_params)
-        format.html { redirect_to @editable_page, notice: 'Editable page was successfully updated.' }
-        format.json { render :show, status: :ok, location: @editable_page }
+        format.html { redirect_to [@year, @editable_page], notice: 'Editable page was successfully updated.' }
+        format.json { render :show, status: :ok, location: [@year, @editable_page] }
       else
         format.html { render :edit }
         format.json { render json: @editable_page.errors, status: :unprocessable_entity }
@@ -56,7 +57,7 @@ class EditablePagesController < ApplicationController
   def destroy
     @editable_page.destroy
     respond_to do |format|
-      format.html { redirect_to editable_pages_url, notice: 'Editable page was successfully destroyed.' }
+      format.html { redirect_to year_editable_pages_url, notice: 'Editable page was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

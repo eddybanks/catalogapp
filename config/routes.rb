@@ -4,11 +4,11 @@ Rails.application.routes.draw do
   get 'courses'           =>  'courses#index'
 
   resources :years do
+    resources :editable_pages
     resources :policies
-    resources :admissions
+    resources :admissions,        controller: 'editable_pages', type: 'Admission'
     resources :general_informations
     resources :administrations
-    resources :editable_pages
   end
 
 end
