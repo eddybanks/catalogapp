@@ -1,2 +1,2 @@
-class GeneralInformation < ActiveRecord::Base
+class GeneralInformation < EditablePage
 end

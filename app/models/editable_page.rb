@@ -5,7 +5,16 @@ class EditablePage < ActiveRecord::Base
 
 end
 
-class Admission < EditablePage; end
 class Administration < EditablePage; end
+class Admission < EditablePage; end
+class College < EditablePage; end
+class Course < EditablePage; end
+class Degree < EditablePage; end
 class Department < EditablePage; end
+class ExtendedLearning < EditablePage; end
 class GeneralInformation < EditablePage; end
+class GraduateProgram < EditablePage; end
+class Policy < EditablePage; end
+class StudentService < EditablePage; end
+class UndergraduateAdvisement < EditablePage; end
+class UndergraduateProgram < EditablePage; end

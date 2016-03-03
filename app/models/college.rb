@@ -1,2 +1,2 @@
-class College < ActiveResource::Base
+class College < EditablePage
 end

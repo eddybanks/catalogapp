@@ -1,3 +1,3 @@
-class Policy < ActiveRecord::Base
+class Policy < EditablePage
 
 end

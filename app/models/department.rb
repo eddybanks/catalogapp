@@ -1,2 +1,2 @@
-class Department < ActiveResource::Base
+class Department < EditablePage
 end

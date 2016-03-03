@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160303220303) do
+ActiveRecord::Schema.define(version: 20160303223405) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,18 @@ ActiveRecord::Schema.define(version: 20160303220303) do
     t.datetime "updated_at",        null: false
   end
 
+  create_table "colleges", force: :cascade do |t|
+    t.text     "section_content"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "degrees", force: :cascade do |t|
+    t.text     "section_content"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
   create_table "editable_page_years", force: :cascade do |t|
     t.integer  "year_id"
     t.integer  "editable_page_id"
@@ -53,6 +65,12 @@ ActiveRecord::Schema.define(version: 20160303220303) do
     t.string   "type"
   end
 
+  create_table "extended_learnings", force: :cascade do |t|
+    t.text     "section_content"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
   create_table "general_informations", force: :cascade do |t|
     t.string   "section_header"
     t.text     "section_text"
@@ -63,6 +81,12 @@ ActiveRecord::Schema.define(version: 20160303220303) do
     t.datetime "updated_at",        null: false
   end
 
+  create_table "graduate_programs", force: :cascade do |t|
+    t.text     "section_content"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
   create_table "policies", force: :cascade do |t|
     t.string   "section_header"
     t.text     "section_text"
@@ -71,6 +95,24 @@ ActiveRecord::Schema.define(version: 20160303220303) do
     t.string   "url_links"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+  end
+
+  create_table "student_services", force: :cascade do |t|
+    t.text     "section_content"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "undergraduate_advisements", force: :cascade do |t|
+    t.text     "section_content"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "undergraduate_programs", force: :cascade do |t|
+    t.text     "section_content"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "years", force: :cascade do |t|
