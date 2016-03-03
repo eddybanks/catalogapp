@@ -1,0 +1,8 @@
+<% @page_title = 'Extended Learning - Distance Education and Continuing Education' %>
+<% @page_header = 'Extended Learning - Distance Education and Continuing Education' %>
+
+<% @extended_learnings.each do |p| %>
+  <div class="section">
+    <%= simple_format(p.section_content) %>
+  </div>
+<% end %>

@@ -1,4 +1,6 @@
+
 <% @editable_pages.each do |e| %>
+  <%= e.type %><br>
   <%= simple_format(e.section_content) %>
 <% end %>
 

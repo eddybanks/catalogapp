@@ -1,0 +1,2 @@
+class ExtendedLearning < EditablePage
+end

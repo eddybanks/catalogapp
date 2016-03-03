@@ -1,0 +1,2 @@
+class GraduateProgram < EditablePage
+end

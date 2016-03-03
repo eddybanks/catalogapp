@@ -1,0 +1,8 @@
+<% @page_title = 'Degrees Offered' %>
+<% @page_header = 'Degrees Offered' %>
+
+<% @degrees.each do |p| %>
+  <div class="section">
+    <%= simple_format(p.section_content) %>
+  </div>
+<% end %>

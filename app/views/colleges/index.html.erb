@@ -1,0 +1,8 @@
+<% @page_title = 'Colleges' %>
+<% @page_header = 'Colleges' %>
+
+<% @colleges.each do |p| %>
+  <div class="section">
+    <%= simple_format(p.section_content) %>
+  </div>
+<% end %>

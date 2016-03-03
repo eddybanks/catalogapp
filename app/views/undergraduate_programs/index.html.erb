@@ -1,0 +1,8 @@
+<% @page_title = 'The Undergraduate Program' %>
+<% @page_header = 'The Undergraduate Program' %>
+
+<% @undergraduate_programs.each do |p| %>
+  <div class="section">
+    <%= simple_format(p.section_content) %>
+  </div>
+<% end %>

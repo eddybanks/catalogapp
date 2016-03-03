@@ -1,0 +1,2 @@
+module ExtendedLearningsHelper
+end

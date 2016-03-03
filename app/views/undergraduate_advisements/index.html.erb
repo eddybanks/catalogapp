@@ -1,0 +1,8 @@
+<% @page_title = 'Undergraduate Academic Advisement' %>
+<% @page_header = 'Undergraduate Academic Advisement' %>
+
+<% @undergraduate_advisements.each do |p| %>
+  <div class="section">
+    <%= simple_format(p.section_content) %>
+  </div>
+<% end %>

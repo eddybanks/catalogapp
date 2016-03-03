@@ -8,7 +8,6 @@ end
 class Administration < EditablePage; end
 class Admission < EditablePage; end
 class College < EditablePage; end
-class Course < EditablePage; end
 class Degree < EditablePage; end
 class Department < EditablePage; end
 class ExtendedLearning < EditablePage; end

@@ -1,0 +1,8 @@
+<% @page_title = 'Student Services Information' %>
+<% @page_header = 'Student Services Information' %>
+
+<% @student_services.each do |p| %>
+  <div class="section">
+    <%= simple_format(p.section_content) %>
+  </div>
+<% end %>

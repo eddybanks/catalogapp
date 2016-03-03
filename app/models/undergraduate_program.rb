@@ -1,0 +1,2 @@
+class UndergraduateProgram < EditablePage
+end

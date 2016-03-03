@@ -1,0 +1,2 @@
+class UndergraduateAdvisement < EditablePage
+end

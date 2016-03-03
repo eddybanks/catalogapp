@@ -1,0 +1,2 @@
+class StudentService < EditablePage
+end

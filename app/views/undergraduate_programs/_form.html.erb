@@ -1,0 +1,21 @@
+<%= form_for(@undergraduate_program) do |f| %>
+  <% if @undergraduate_program.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@undergraduate_program.errors.count, "error") %> prohibited this undergraduate_program from being saved:</h2>
+
+      <ul>
+      <% @undergraduate_program.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :section_content %><br>
+    <%= f.text_area :section_content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
